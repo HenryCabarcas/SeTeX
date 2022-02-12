@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./editor.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <code-editor></code-editor>
+    <table>
+<tr><td>Key:</td><td id="key"></td></tr>
+<tr><td>Key Code:</td><td id="keyCode"></td></tr>
+<tr><td>Event Code:</td><td id="eventCode"></td></tr>
+</table>
+
+    <div class="goo" contenteditable="true">This is an example of a simple headline or text with rounded corners using<br>a gooey SVG filter.</div>
+</h1>
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+  </body>
+  <script src="./editor.js"></script>
+  <script src="./header.js"></script>
+</html>

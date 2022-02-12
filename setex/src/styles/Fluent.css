@@ -1,0 +1,112 @@
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+@media (max-width: 800px) {
+  .center {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.fluent-button {
+  position: relative;
+  display: block;
+  transition: scale translate 350ms ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2.5rem;
+  margin: 0.25em 1rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  background-color: rgba(41, 245, 242, 0.6);
+  background: url("http://i.imgur.com/P0Kkvuv.png");
+  -webkit-background: url("http://i.imgur.com/P0Kkvuv.png");
+  /*
+  image took from:
+ https://codepen.io/simoberny/pen/VWKrxg
+  */
+}
+.fluent:active {
+  transform: scale(0.99) translateY(1px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.fluent:hover {
+  color: rgb(255, 255, 255);
+}
+.border-svg {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+span.circle {
+  cursor: pointer;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.486);
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 0.384) 10%,
+    transparent 50%
+  );
+  z-index: -1;
+  transition: scale ease 300ms;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+.fluent:active > span.circle {
+  animation: ripple 400ms ease-in-out;
+}
+
+.fluent:active circle {
+  fill: white;
+  r: 5000px;
+}
+.border-svg circle {
+  display: none;
+  transition: r 350ms ease-in-out;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(3);
+    background: radial-gradient(
+      circle,
+      transparent 0%,
+      rgb(255, 255, 255) 50% transparent 100%
+    );
+  }
+  100% {
+    transform: scale(1);
+    background: radial-gradient(
+      circle,
+      rgb(255, 255, 255) 50% transparent 100%
+    );
+  }
+}
+@keyframes ripple2 {
+  0% {
+    r: 0px;
+  }
+  100% {
+    r: 5000px;
+  }
+}

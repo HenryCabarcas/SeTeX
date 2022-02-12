@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "minimap";
+  src: url("https://cdn.jsdelivr.net/gh/davestewart/minimap-font@ee2d6c79c101bfe13658e2dcbdc1e1bbeef24def/src/webfont/minimap.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/davestewart/minimap-font@ee2d6c79c101bfe13658e2dcbdc1e1bbeef24def/src/webfont/minimap.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&display=swap");
+
+html {
+  --scrollbarBG: #cfd8dc00;
+  --thumbBG: #90a4ae;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+::selection {
+  background-color: transparent;
+  /*WebKit/BlinkBrowsers*/
+}
+.selected {
+  position: absolute;
+  background-color: #52c9e4c2;
+  display: inline;
+  box-decoration-break: clone;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+::-moz-selection {
+  background: #a82a2a75; /* WebKit/Blink Browsers */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+[id^="editor-"] {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  color: #5b8cb1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  caret-color: aqua;
+}
+
+[id^="editor-colors-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 2px;
+  z-index: 2;
+}
+
+[id^="editor-icons-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 30px;
+  z-index: 2;
+}
+
+[id^="editor-marks-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 20px;
+  z-index: 2;
+}
+
+[id^="editor-numbers-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-width: max-content;
+  max-width: max-content;
+  z-index: 2;
+}
+
+[id^="editor-lines-"] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  scrollbar-color: #000;
+  z-index: 0;
+}
+.goo {
+  font-size: 3rem;
+  line-height: 1.35;
+
+  background: red;
+  padding: 0.5rem 1rem;
+  /*filter: url("#goo");*/
+}
+
+.goo:focus {
+  outline: 0;
+}
+[id^="editor-select-"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: url("#goo");
+  -webkit-filter: url("#goo");
+}
+
+[id^="editor-minimap-"] {
+  position: relative;
+  display: flex;
+  border: 0;
+  flex-direction: column;
+  width: 160px;
+  height: 100%;
+  background-color: #1c1e26;
+  z-index: 2;
+}
+
+[id^="line-icon-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: visibility 250ms ease-in;
+  background-color: aquamarine;
+  -webkit-transition: visibility 250ms ease-in;
+  -moz-transition: visibility 250ms ease-in;
+  -ms-transition: visibility 250ms ease-in;
+  -o-transition: visibility 250ms ease-in;
+}
+
+[id^="editor-icons-"]:hover [id^="line-icon-"] {
+  visibility: visible;
+}
+
+[id^="line-color-"] {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+[id^="line-number-"] {
+  display: block;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+[id^="line-mark-"] {
+  display: block;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+
+[id^="line-icon"] {
+  display: block;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+
+.line {
+  padding-left: 4px;
+  display: block;
+  max-width: 100vw;
+}
+
+.cursor {
+  position: fixed;
+  display: block;
+  z-index: 2;
+  height: auto;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+  animation: cursor-0 900ms infinite steps(2, end);
+  -webkit-animation: cursor-0 900ms infinite steps(2, end);
+}
+
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently*/
+}
+
+@keyframes cursor-0 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

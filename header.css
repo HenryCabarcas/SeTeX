@@ -1,0 +1,49 @@
+* {
+  --background: #000;
+  --foreground: #fff;
+}
+
+body {
+  margin: 0;
+}
+#setexTabs {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  background-color: var(--background);
+  padding: 0;
+}
+
+#setexTabTitles {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  width: auto;
+  padding: 0;
+  height: auto;
+  cursor: default;
+}
+
+#setexTabTitles > div {
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: small;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--foreground);
+  cursor: default;
+  margin: 0;
+}
+
+#setexTabTitles > div:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+.header-tab {
+  display: block;
+}

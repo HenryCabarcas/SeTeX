@@ -1,0 +1,131 @@
+#setexTitlebar-section {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  height: 32px;
+  background-color: var(--background);
+  color: var(--text);
+  text-align: center;
+  font-size: 13px;
+  z-index: 1;
+}
+
+#setexTitlebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-width: 100%;
+  cursor: default;
+  user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+#setexTitlebarMenu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  width: auto;
+  height: 100%;
+  z-index: 1;
+  -webkit-app-region: no-drag;
+}
+
+#setexTitlebarMenu * {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  justify-self: left;
+  align-items: center;
+  padding: 0 6px;
+  z-index: 1;
+  -webkit-app-region: no-drag;
+}
+
+#setexTitlebarMenu > img {
+  height: 70%;
+  -webkit-app-region: no-drag;
+}
+
+#setexTitle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  left: 50%;
+  padding: 0 16px;
+  height: 30px;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  z-index: 0;
+  -webkit-app-region: drag;
+}
+
+#setexTitlebarButtons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  z-index: 1;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-button {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 100%;
+}
+
+.titlebar-button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.titlebar-button:active {
+  background-color: var(--foreground);
+}
+
+#setexCloseButton {
+  border-top-right-radius: 4.5px;
+}
+#setexCloseButton:active {
+  background-color: #ed5050;
+}
+#setexMinimizeButton {
+  background-color: #7c63de;
+  /*border-top-right-radius: 12px;*/
+  border-bottom-left-radius: 24px 16px;
+  overflow: hidden;
+  box-shadow: inset 1px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+#setexMinimizeButton::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  left: -8px;
+  top: 0;
+  width: 10px;
+  height: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 6px -6px 0px 6px #7c63de, 2px -2px 2px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+#setexMinimizeButton:hover #setexMinimizeButton:before {
+  box-shadow: 6px -6px 0px 6px black;
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 151 150.99998">
+  <defs>
+    <style>
+      .b4a4fd69-89c8-4803-a4cd-ece0d872b03a {
+        fill: #4d55a1;
+      }
+
+      .b4a4fd69-89c8-4803-a4cd-ece0d872b03a, .f3fdd78b-9af2-4ff9-a74e-1854d2d89e4f, .fb031702-9c06-4ac7-9a24-ab46fb2b1e6e {
+        stroke: #4b9bf7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .eeddd231-a9ba-4370-b597-251197146a63 {
+        fill: url(#b8e659a4-b146-4fb9-a5fb-42c290e57853);
+      }
+
+      .f969c771-174f-49fa-aeda-14de5d093159 {
+        fill: url(#bcb0db13-34b7-4fb9-907d-6726875247ac);
+      }
+
+      .fb031702-9c06-4ac7-9a24-ab46fb2b1e6e {
+        fill: #fff;
+      }
+
+      .f3fdd78b-9af2-4ff9-a74e-1854d2d89e4f {
+        fill: url(#e869a289-115f-430b-80ca-ee061dbc9510);
+      }
+
+      .bd9aa1ee-afd8-4ba0-9c24-a6e6201b2efa {
+        fill: #4b9bf7;
+      }
+    </style>
+    <linearGradient id="b8e659a4-b146-4fb9-a5fb-42c290e57853" x1="105.24407" y1="128.2721" x2="134.25593" y2="111.5221" gradientUnits="userSpaceOnUse">
+      <stop offset="0.01654" stop-color="#091338"/>
+      <stop offset="0.03645" stop-color="#081235" stop-opacity="0.93902"/>
+      <stop offset="0.22864" stop-color="#040818" stop-opacity="0.42541"/>
+      <stop offset="0.39548" stop-color="#010206" stop-opacity="0.11153"/>
+      <stop offset="0.51724" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bcb0db13-34b7-4fb9-907d-6726875247ac" x1="41.24407" y1="128.2721" x2="70.25593" y2="111.5221" gradientTransform="matrix(-1, 0, 0, 1, 87, 0)" xlink:href="#b8e659a4-b146-4fb9-a5fb-42c290e57853"/>
+    <linearGradient id="e869a289-115f-430b-80ca-ee061dbc9510" x1="51.12323" y1="49.12137" x2="67.85443" y2="20.14208" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#091338"/>
+      <stop offset="0.03975" stop-color="#081235" stop-opacity="0.93902"/>
+      <stop offset="0.4236" stop-color="#040818" stop-opacity="0.42541"/>
+      <stop offset="0.75682" stop-color="#010206" stop-opacity="0.11153"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="b7bb96b9-55d0-44a7-8d2d-b2633c3129c1" data-name="Layer 2">
+    <g id="aa3980da-0a75-4cb4-a919-14a45f5cb19d" data-name="Layer 1">
+      <g>
+        <path class="b4a4fd69-89c8-4803-a4cd-ece0d872b03a" d="M133.83311,150.5l-116.45893,0A16.61385,16.61385,0,0,1,.5,133.83309L.5,17.372A16.61313,16.61313,0,0,1,17.1667.5h91.667L150.5,42.16661l0,91.45913A16.61387,16.61387,0,0,1,133.83311,150.5Z"/>
+        <polygon class="eeddd231-a9ba-4370-b597-251197146a63" points="135.5 149.5 117.5 149.5 117.5 82.5 135.5 149.5"/>
+        <polygon class="f969c771-174f-49fa-aeda-14de5d093159" points="15.5 149.5 33.5 149.5 33.5 82.5 15.5 149.5"/>
+        <path class="fb031702-9c06-4ac7-9a24-ab46fb2b1e6e" d="M117.16665,149.5v-59A6.66667,6.66667,0,0,0,110.5,83.83331h-70A6.66667,6.66667,0,0,0,33.83334,90.5v59"/>
+        <path class="f3fdd78b-9af2-4ff9-a74e-1854d2d89e4f" d="M33.83334.5V35A7.16666,7.16666,0,0,0,41,42.16665h59.5"/>
+        <rect class="bd9aa1ee-afd8-4ba0-9c24-a6e6201b2efa" x="43.5" y="96.49999" width="64" height="5"/>
+        <rect class="bd9aa1ee-afd8-4ba0-9c24-a6e6201b2efa" x="43.5" y="109.49999" width="64" height="5"/>
+      </g>
+    </g>
+  </g>
+</svg>
